@@ -70,7 +70,7 @@ composer install
      http://localhost/MIRA/frontend/login.html
 
 
-## Project Structure\
+## Project Structure
 
 research-repo/\
 ├── api/\
