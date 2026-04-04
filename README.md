@@ -4,20 +4,20 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 
 
 ## Features
-📄 Upload and manage research papers (PDF)
-🔍 AI-powered semantic search across papers
-💬 Chat with individual papers using RAG (Retrieval-Augmented Generation)
-🔐 User authentication with roles (Student, Lecturer, Admin)
+📄 Upload and manage research papers (PDF)\
+🔍 AI-powered semantic search across papers\
+💬 Chat with individual papers using RAG (Retrieval-Augmented Generation)\
+🔐 User authentication with roles (Student, Lecturer, Admin)\
 🔑 Google OAuth login support
 
 
 ## Tech Stack
 
-**-Frontend:** HTML, CSS, JavaScript\
-**-Backend:** PHP\
-**-Database:** MySQL\
-**-AI**: Google Gemini API (chat + embeddings)
-**-Auth:** JWT + Google OAuth
+1. **-Frontend:** HTML, CSS, JavaScript\
+2. **-Backend:** PHP\
+3. **-Database:** MySQL\
+4. **-AI**: Google Gemini API (chat + embeddings)
+5. **-Auth:** JWT + Google OAuth
 
 
 ## Local Setup Instructions
