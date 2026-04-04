@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIRA | Paper</title>
+  <link rel="icon" type="image/png" href="/research-repo/frontend/assets/umat_logo.png"/>
+  <link rel="stylesheet" href="css/paper.css"/>
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────────────────────── -->
+<nav class="navbar">
+  <a class="navbar-brand" href="/research-repo/frontend/index.html">
+    <img src="assets/umat_logo.png" alt="UMaT Logo"/>
+    <div class="navbar-brand-text">
+      <h1>MIRA</h1>
+      <p>Managing Intelligence in Research Academia</p>
+    </div>
+  </a>
+  <div class="navbar-nav">
+    <a class="nav-link" href="/research-repo/frontend/index.html">Home</a>
+    <a class="nav-link" href="/research-repo/frontend/search.html">Search</a>
+  <a class="nav-link" id="navUpload" href="/research-repo/frontend/upload.html">Upload</a>
+  </div>
+  <div class="navbar-user">
+    <div>
+      <div class="user-name" id="userName"></div>
+      <div class="user-role" id="userRole"></div>
+    </div>
+    <div class="user-avatar" id="userAvatar"></div>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<!-- ── Two-column layout ─────────────────────────────────────────────────── -->
+<div class="page">
+
+  <!-- Left: Paper details -->
+  <div id="paperContent">
+    <div class="paper-card">
+      <a class="back-link" href="/research-repo/frontend/index.html">
+        ← Back to Repository
+      </a>
+
+      <div class="paper-title" id="paperTitle">Loading...</div>
+      <div class="paper-authors" id="paperAuthors"></div>
+
+      <div class="paper-meta">
+        <span class="paper-date" id="paperDate"></span>
+        <span class="paper-uploader" id="paperUploader"></span>
+      </div>
+
+      <div class="section-label">Topic Tags</div>
+      <div class="paper-tags" id="paperTags"></div>
+
+      <div class="section-label">Abstract</div>
+      <div class="paper-abstract" id="paperAbstract"></div>
+
+      <div class="section-label">AI Summary</div>
+      <div class="summary-box" id="paperSummary"></div>
+
+      <div class="action-row">
+        <a id="downloadBtn" href="#" class="btn btn-primary" target="_blank">
+          Download PDF
+        </a>
+        <button id="deleteBtn" class="btn btn-danger"
+                onclick="deletePaper()" style="display:none">
+          Delete Paper
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Chatbot -->
+  <div class="chat-card">
+    <div class="chat-header">
+      <h3>Ask MIRA</h3>
+      <p>Chat with this paper using AI</p>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-welcome" id="chatWelcome">
+        <div class="chat-welcome-icon">💬</div>
+        <h4>Ask anything about this paper</h4>
+        <p>MIRA will answer based on the actual paper content.</p>
+        <div class="suggested-questions">
+          <button class="suggested-q"
+            onclick="askQuestion('What is the main objective of this paper?')">
+            What is the main objective?
+          </button>
+          <button class="suggested-q"
+            onclick="askQuestion('What methodology was used in this research?')">
+            What methodology was used?
+          </button>
+          <button class="suggested-q"
+            onclick="askQuestion('What are the key findings and conclusions?')">
+            What are the key findings?
+          </button>
+          <button class="suggested-q"
+            onclick="askQuestion('What dataset was used in this study?')">
+            What dataset was used?
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-row">
+      <textarea class="chat-input" id="chatInput"
+                placeholder="Ask a question about this paper..."
+                rows="1"></textarea>
+      <button class="chat-send-btn" id="sendBtn" onclick="sendMessage()">
+        Send
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<script src="js/paper.js"></script>
+</body>
+</html>

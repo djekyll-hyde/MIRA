@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIRA | Search</title>
+  <link rel="icon" type="image/png" href="/research-repo/frontend/assets/umat_logo.png"/>
+  <link rel="stylesheet" href="css/search.css"/>
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────────────────────── -->
+<nav class="navbar">
+  <a class="navbar-brand" href="/research-repo/frontend/index.html">
+    <img src="assets/umat_logo.png" alt="UMaT Logo"/>
+    <div class="navbar-brand-text">
+      <h1>MIRA</h1>
+      <p>Managing Intelligence in Research Academia</p>
+    </div>
+  </a>
+  <div class="navbar-nav">
+    <a class="nav-link" href="/research-repo/frontend/index.html">Home</a>
+    <a class="nav-link active" href="/research-repo/frontend/search.html">Search</a>
+  <a class="nav-link" id="navUpload" href="/research-repo/frontend/upload.html">Upload</a>
+  </div>
+  <div class="navbar-user">
+    <div>
+      <div class="user-name" id="userName"></div>
+      <div class="user-role" id="userRole"></div>
+    </div>
+    <div class="user-avatar" id="userAvatar"></div>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<!-- ── Search hero ───────────────────────────────────────────────────────── -->
+<div class="search-hero">
+  <h2>Semantic Search</h2>
+  <form onsubmit="handleSearch(event)">
+    <div class="search-bar">
+      <input type="text" id="searchInput"
+             placeholder="Search by topic, question, or keyword..."/>
+      <button type="submit" id="searchBtn">Search</button>
+    </div>
+  </form>
+
+  <!-- Suggested searches -->
+  <div class="suggestions">
+    <button class="suggestion-pill" onclick="searchSuggestion('machine learning')">
+      machine learning
+    </button>
+    <button class="suggestion-pill" onclick="searchSuggestion('data analysis')">
+      data analysis
+    </button>
+    <button class="suggestion-pill" onclick="searchSuggestion('system design')">
+      system design
+    </button>
+    <button class="suggestion-pill" onclick="searchSuggestion('artificial intelligence')">
+      artificial intelligence
+    </button>
+  </div>
+</div>
+
+<!-- ── Results ───────────────────────────────────────────────────────────── -->
+<div class="page">
+  <div class="results-header" id="resultsHeader" style="display:none">
+    <span class="results-title" id="resultsTitle"></span>
+    <span class="results-count" id="resultsCount"></span>
+  </div>
+  <div id="results"></div>
+</div>
+
+<script src="js/search.js"></script>
+</body>
+</html>

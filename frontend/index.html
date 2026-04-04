@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIRA | Home</title>
+  <link rel="icon" type="image/png" href="/research-repo/frontend/assets/umat_logo.png"/>
+  <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────────────────────── -->
+<nav class="navbar">
+  <a class="navbar-brand" href="/research-repo/frontend/index.html">
+    <img src="assets/umat_logo.png" alt="UMaT Logo"/>
+    <div class="navbar-brand-text">
+      <h1>MIRA</h1>
+      <p>Managing Intelligence in Research Academia</p>
+    </div>
+  </a>
+
+  <div class="navbar-nav">
+    <a class="nav-link active" href="/research-repo/frontend/index.html">Home</a>
+    <a class="nav-link" href="/research-repo/frontend/search.html">Search</a>
+    <a class="nav-link" id="navUpload" href="/research-repo/frontend/upload.html">Upload</a>
+  </div>
+
+  <div class="navbar-user">
+    <div>
+      <div class="user-name" id="userName"></div>
+      <div class="user-role" id="userRole"></div>
+    </div>
+    <div class="user-avatar" id="userAvatar"></div>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<!-- ── Hero search ──────────────────────────────────────────────────────── -->
+<div class="hero">
+  <h2>Research Paper Repository</h2>
+  <p>Search, explore, and interact with academic research papers</p>
+  <form class="search-bar" onsubmit="handleSearch(event)">
+    <input type="text" id="searchInput" placeholder="Search by topic, keyword, or question..."/>
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<!-- ── Main content ─────────────────────────────────────────────────────── -->
+<div class="page">
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-number" id="totalPapers">—</div>
+      <div class="stat-label">Total Papers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="totalUsers">—</div>
+      <div class="stat-label">Researchers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="totalTags">—</div>
+      <div class="stat-label">Topic Tags</div>
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <span class="results-count">All Papers</span>
+      <select class="filter-select" id="tagFilter" onchange="filterByTag()">
+        <option value="">All Topics</option>
+      </select>
+    </div>
+    <a href="/research-repo/frontend/upload.html"
+   id="btnUpload"
+   class="btn btn-primary"
+   style="display:none">
+  + Upload Paper
+</a>
+  </div>
+
+  <!-- Papers grid -->
+  <div class="papers-grid" id="papersGrid"></div>
+
+</div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>

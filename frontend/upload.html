@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIRA | Upload Paper</title>
+  <link rel="icon" type="image/png" href="/research-repo/frontend/assets/umat_logo.png"/>
+  <link rel="stylesheet" href="css/upload.css"/>
+  <style id="authGuard">body { visibility: hidden; }</style>
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────────────────────── -->
+<nav class="navbar">
+  <a class="navbar-brand" href="/research-repo/frontend/index.html">
+    <img src="assets/umat_logo.png" alt="UMaT Logo"/>
+    <div class="navbar-brand-text">
+      <h1>MIRA</h1>
+      <p>Managing Intelligence in Research Academia</p>
+    </div>
+  </a>
+  <div class="navbar-nav">
+    <a class="nav-link" href="/research-repo/frontend/index.html">Home</a>
+    <a class="nav-link" href="/research-repo/frontend/search.html">Search</a>
+    <a class="nav-link active" href="/research-repo/frontend/upload.html">Upload</a>
+  </div>
+  <div class="navbar-user">
+    <div>
+      <div class="user-name" id="userName"></div>
+      <div class="user-role" id="userRole"></div>
+    </div>
+    <div class="user-avatar" id="userAvatar"></div>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<!-- ── Page content ─────────────────────────────────────────────────────── -->
+<div class="page">
+  <div class="page-header">
+    <h2>Upload Research Paper</h2>
+    <p>Upload a PDF — the system will automatically extract, chunk, embed, and summarise it.</p>
+  </div>
+
+  <div class="upload-card">
+    <form id="uploadForm" onsubmit="handleUpload(event)">
+
+      <!-- PDF Drop Zone -->
+      <div class="form-group">
+        <label>PDF File</label>
+        <div class="drop-zone" id="dropZone">
+          <div id="dropPrompt">
+            <div class="drop-icon">📄</div>
+            <div class="drop-text">
+              <strong>Click to browse</strong> or drag and drop your PDF here
+            </div>
+            <div class="drop-subtext">PDF only · Maximum 10MB</div>
+          </div>
+          <div class="file-selected" id="fileSelected"></div>
+        </div>
+        <input type="file" id="pdfFile" accept=".pdf" style="display:none"/>
+      </div>
+
+      <hr class="form-divider"/>
+
+      <!-- Paper details -->
+      <div class="form-group">
+        <label>Paper Title *</label>
+        <input class="input" type="text" id="title"
+               placeholder="e.g. Deep Learning Approaches for Medical Image Segmentation" required/>
+      </div>
+
+      <div class="form-group">
+        <label>Authors</label>
+        <input class="input" type="text" id="authors"
+               placeholder="e.g. John Doe, Jane Smith"/>
+        <div class="hint">Separate multiple authors with commas</div>
+      </div>
+
+      <div class="form-group">
+        <label>Abstract</label>
+        <textarea class="input" id="abstract" rows="4"
+                  placeholder="Paste the paper abstract here (optional)..."
+                  style="resize:vertical; font-family:inherit"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Topic Tags</label>
+        <input class="input" type="text" id="tags"
+               placeholder="e.g. Machine Learning, Healthcare, Deep Learning"/>
+        <div class="hint">Separate tags with commas</div>
+      </div>
+
+      <!-- Progress box -->
+      <div class="progress-box" id="progressBox">
+        <div class="progress-title">Processing your paper...</div>
+        <div class="progress-steps">
+          <div class="progress-step" id="stepUpload">
+            <div class="step-dot"></div> Uploading PDF to server
+          </div>
+          <div class="progress-step" id="stepParse">
+            <div class="step-dot"></div> Extracting text from PDF
+          </div>
+          <div class="progress-step" id="stepChunk">
+            <div class="step-dot"></div> Splitting into chunks
+          </div>
+          <div class="progress-step" id="stepEmbed">
+            <div class="step-dot"></div> Generating embeddings
+          </div>
+          <div class="progress-step" id="stepSummary">
+            <div class="step-dot"></div> Generating AI summary
+          </div>
+        </div>
+      </div>
+
+      <div id="uploadAlert" style="display:none"></div>
+
+      <!-- Submit -->
+      <div class="submit-row">
+        <button type="submit" class="btn btn-primary" id="submitBtn">
+          Upload Paper
+        </button>
+        <a href="/research-repo/frontend/index.html" class="btn btn-outline">
+          Cancel
+        </a>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script src="js/upload.js"></script>
+</body>
+</html>
