@@ -11,7 +11,7 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 🔑 Google OAuth login support
 
 
-## Tech Stack\
+## Tech Stack
 
 **-Frontend:** HTML, CSS, JavaScript\
 **-Backend:** PHP\
@@ -63,31 +63,31 @@ composer install
      - Your Gemini API key
 
 
-**6. Set up Google login (optional)**
+**6. Set up Google login (optional)**\
    Edit `frontend/js/auth.js` and replace `your_google_client_id_here` with your actual Google OAuth Client ID.
 
-**7. Open the app**
+**7. Open the app**\
      http://localhost/MIRA/frontend/login.html
 
 
-## Project Structure
+## Project Structure\
 
-research-repo/
-├── api/
-│   ├── config.example.php   ← copy to config.php and fill in your values
-│   ├── auth.php
-│   ├── upload.php
-│   ├── search.php
-│   ├── chat.php
-│   └── helpers/
-├── frontend/
-│   ├── js/
-│   │   └── auth.example.js  ← copy to auth.js and fill in your Google Client ID
-│   ├── css/
-│   └── *.html
-├── uploads/                 ← PDF files stored here (excluded from Git)
-├── database.sql             ← run this once to create all tables
-└── composer.json
+research-repo/\
+├── api/\
+│   ├── config.example.php   ← copy to config.php and fill in your values\
+│   ├── auth.php\
+│   ├── upload.php\
+│   ├── search.php\
+│   ├── chat.php\
+│   └── helpers/\
+├── frontend/\
+│   ├── js/\
+│   │   └── auth.example.js  ← copy to auth.js and fill in your Google Client ID\
+│   ├── css/\
+│   └── *.html\
+├── uploads/                 ← PDF files stored here (excluded from Git)\
+├── database.sql             ← run this once to create all tables\
+└── composer.json\
 
 ## Screenshots
 
