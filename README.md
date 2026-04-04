@@ -13,20 +13,20 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 
 ## Tech Stack\
 
-**-Frontend:** HTML, CSS, JavaScript
-**-Backend:** PHP
-**-Database:** MySQL
+**-Frontend:** HTML, CSS, JavaScript\
+**-Backend:** PHP\
+**-Database:** MySQL\
 **-AI**: Google Gemini API (chat + embeddings)
 **-Auth:** JWT + Google OAuth
 
 
 ## Local Setup Instructions
 
-1. ### Requirements
-2. [XAMPP](https://www.apachefriends.org) (Apache + MySQL + PHP 8.x)
-3. [Composer](https://getcomposer.org)
-4. [Gemini API key](https://aistudio.google.com/apikey) (free)
-5. [Google OAuth Client ID](https://console.cloud.google.com/apis/credentials) (for Google login)
+### Requirements
+1. [XAMPP](https://www.apachefriends.org) (Apache + MySQL + PHP 8.x)
+2. [Composer](https://getcomposer.org)
+3. [Gemini API key](https://aistudio.google.com/apikey) (free)
+4. [Google OAuth Client ID](https://console.cloud.google.com/apis/credentials) (for Google login)
 
 
 
@@ -51,7 +51,7 @@ cd MIRA
 composer install
 ```
 
-**4. Set up the database**
+**4. Set up the database**\
      - Start Apache and MySQL in the XAMPP Control Panel
      - Open `http://localhost/phpmyadmin`
      - Create a new database named `mira`
