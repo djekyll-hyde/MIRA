@@ -11,7 +11,8 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 🔑 Google OAuth login support
 
 
-## Tech Stack
+## Tech Stack\
+
 **-Frontend:** HTML, CSS, JavaScript
 **-Backend:** PHP
 **-Database:** MySQL
@@ -31,10 +32,12 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 
 
 **1. Clone the repo**
+
      git clone https://github.com/yourusername/research-repo.git
 
 
 **2. Place the folder in XAMPP's web root**
+
      **For Windows**
      C:\xampp\htdocs\MIRA\
 
