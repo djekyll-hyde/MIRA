@@ -51,7 +51,8 @@ cd MIRA
 composer install
 ```
 
-**4. Set up the database**\
+**4. Set up the database**
+
      - Start Apache and MySQL in the XAMPP Control Panel
      - Open `http://localhost/phpmyadmin`
      - Create a new database named `mira`
@@ -63,10 +64,12 @@ composer install
      - Your Gemini API key
 
 
-**6. Set up Google login (optional)**\
+**6. Set up Google login (optional)**
+
    Edit `frontend/js/auth.js` and replace `your_google_client_id_here` with your actual Google OAuth Client ID.
 
-**7. Open the app**\
+**7. Open the app**
+
      http://localhost/MIRA/frontend/login.html
 
 
