@@ -38,10 +38,10 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 
 **2. Place the folder in XAMPP's web root**
 
-     **For Windows**
+     For Windows
      C:\xampp\htdocs\MIRA\
 
-     **For Windows**
+     For Linux
      Copy this folder to /opt/lampp/htdocs/
 
 
