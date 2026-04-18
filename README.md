@@ -13,11 +13,11 @@ A web-based Knowledge Management System for uploading, searching, and chatting w
 
 ## Tech Stack
 
-1. **-Frontend:** HTML, CSS, JavaScript\
-2. **-Backend:** PHP\
-3. **-Database:** MySQL\
-4. **-AI**: Google Gemini API (chat + embeddings)
-5. **-Auth:** JWT + Google OAuth
+1. **Frontend:** HTML, CSS, JavaScript\
+2. **Backend:** PHP\
+3. **Database:** MySQL\
+4. **AI**: Google Gemini API (chat + embeddings)
+5. **Auth:** JWT + Google OAuth
 
 
 ## Local Setup Instructions
